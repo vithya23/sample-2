@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Essential for mobile responsiveness -->
+    <title>FUND RAISING</title>
+    <style>
+        /* Set up the page background and typography */
+        body {
+            background-color: #f2f2f2; /* Solid background color for the rest of the page */
+            font-family: Arial, sans-serif;
+            color: black; /* Change text color for better contrast */
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        /* Background image for the top quarter of the page */
+        .header {
+            background-image: url('https://i0.wp.com/ketto.blog/wp-content/uploads/2022/03/15-Best-Fundraising-Campaign-Ideas-for-Underprivileged-Children.png?fit=1024%2C576&ssl=1');
+            background-size: cover;
+            background-position: center;
+            height: 25vh; /* Set to occupy one-fourth of the viewport height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 1px 1px 2px #333; /* Shadow for better visibility */
+        }
+
+        h1 {
+            font-size: 6vw; /* Scales based on viewport width */
+            color: white; /* Title color set to white */
+            margin: 0;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px; /* Ensures it doesn't get too large on wide screens */
+            margin: 20px auto;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+            color: black;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input[type="text"], input[type="tel"], input[type="email"], input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box; /* Ensures padding is included in width */
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Adjust the form for smaller phones (less than 480px wide) */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 8vw; /* Further scale the title for smaller screens */
+            }
+
+            form {
+                padding: 15px;
+                margin: 10px auto;
+                width: 95%;
+            }
+
+            input[type="text"], input[type="tel"], input[type="email"], input[type="submit"] {
+                font-size: 14px; /* Adjust the input and button size */
+                padding: 10px;
+            }
+        }
+
+        /* Adjust the form for tablets (less than 768px wide) */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 7vw; /* Adjust the title size for tablet screens */
+            }
+
+            form {
+                width: 90%;
+                padding: 20px;
+            }
+
+            input[type="text"], input[type="tel"], input[type="email"], input[type="submit"] {
+                font-size: 15px;
+                padding: 12px;
+            }
+        }
+
+        .error-message {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>FUND RAISING</h1>
+    </div>
+    <form id="myForm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DdM00000BPRzZ" method="POST">
+        <input type="hidden" name="oid" value="00DdM00000BPRzZ">
+        <input type="hidden" name="retURL" value="http://www.google.com">
+
+        <label for="first_name">First Name</label>
+        <input id="first_name" maxlength="40" name="first_name" size="20" type="text" required />
+
+        <label for="last_name">Last Name</label>
+        <input id="last_name" maxlength="80" name="last_name" size="20" type="text" required />
+
+        <label for="company">Company</label>
+        <input id="company" maxlength="40" name="company" size="20" type="text" />
+
+        <label for="phone">Phone</label>
+        <input id="phone" name="Phone" maxlength="15" minlength="10" size="10" type="tel" pattern="\d{10,15}" required />
+        <span class="error-message">Please enter a valid phone number (10-15 digits).</span>
+
+        <label for="title">Title</label>
+        <input id="title" maxlength="40" name="title" size="20" type="text" />
+
+        <input type="submit" name="submit" value="Submit">
+    </form>
+</body>
+</html>
